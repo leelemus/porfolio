@@ -12,19 +12,27 @@
         <link rel="stylesheet" href="./main.css" type="text/css">
     </head>
     <body>
+        <div class="mainViewport">
         <header role="header">
             <section class="headerTitle">
                 <h1>Lee Lemus</h1>
                 <p>Developer. Designer. Problem Solver</p>
             </section>
             <nav role="navigation">
-                <img src="./images/hamburger-placeholder.png" alt="placeholder for hamburger menu"/>
-                <!--<ul>
-                    <li class="navLink">About</li>
-                    <li class="navLink">Projects</li>
-                    <li class="navLink">Contact</li>
-                    <li class="navLink">Resume</li>
-                </ul>-->
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="menuNavItems">
+                            <li>About</li>
+                            <li>Projects</li>
+                            <li>Contact</li>
+                            <li>Resume</li>
+                    </ul>
+                </div>
             </nav>   
         </header>
         <main role="main">
@@ -68,5 +76,6 @@
         <footer>
                 <p>Lee Lemus &copy; 2019.</p>
         </footer>
+    </div>
     </body>
 </html>
