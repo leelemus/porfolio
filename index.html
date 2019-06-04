@@ -8,42 +8,45 @@
         <meta name="description" content="This is the porftolio site of Lee Lemus. You can read about him, view his projects, and contact him.">
         <meta name="keywords" content="Lee Lemus, Software Developer, JavaScript, HTML5, CSS3, JQuery">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <script src="https://kit.fontawesome.com/9bf45178cc.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./main.css" type="text/css">
     </head>
     <body>
-        <div class="mainViewport">
         <header role="header">
             <section class="headerTitle">
+                <a href="./index.html">
                 <h1>Lee Lemus</h1>
                 <p>Developer. Designer. Problem Solver</p>
+                </a>
             </section>
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-                    <div id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul id="menuNavItems">
-                            <li>About</li>
-                            <li>Projects</li>
-                            <li>Contact</li>
-                            <li>Resume</li>
-                    </ul>
-                </div>
-            </nav>   
+            <a href="#main-menu" id="main-menu-toggle" class="menu-toggle">
+                <span class="fa fa-bars"></span>
+            </a>
+            <nav id="main-menu" class="main-menu">
+                <a href="#main-menu-toggle" id="main-menu-close" class="menu-close">
+                    <span class="far fa-window-close"></span>
+                </a>
+                <ul>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#projects" >Projects</a></li>
+                    <li><a href="#contact" >Contact</a></li>
+                    <li><a href="#resume" >Resume</a></li>
+                </ul>
+            </nav> 
+            <a href="#main-menu-toggle" class="backdrop" hidden></a>  
         </header>
         <main role="main">
-            <section role="about" class="mainSection about">
-                <img id="heroImage" src="./images/hero-image.jpg" alt="Hi! I'm Lee Lemus. I'm a developer, designer, and problem-solver."/>
+            <section role="about" class="mainSection about" id="about">
+                <div class="cropImage">
+                    <img id="heroImage" src="./images/hero-image.jpg" alt="Hi! I'm Lee Lemus. I'm a developer, designer, and problem-solver."/>
+                </div>
                 <h1>Hi! I'm Lee.</h1>
                 <p>I am a full-stack software engineer that loves to design and implement clean and elegant solutions.  I consider myself a student of the game.  Debugging and grokking are guilty pleasures of mine. I enjoy working either front or back end.  I strive to be direct and friendly when I communicate.</p>
                 <p>I leverage my experience in sales, marketing, customer service, and project management to fully understand the problem at hand and to create a streamlined but user-friendly solution.</p>
                 <p>When I’m not coding or solving problems, you can find me riding a bike, playing soccer, reading/watching sci-fi, DJing, or spending time with my wife and daughters (future coders). </p>
             </section>
-            <section role="projects" class="mainSection projects">
+            <section role="projects" class="mainSection projects" id="projects">
                 <h2>Projects</h2>
                 <h3>Bike Type Quiz</h3>
                 <img src="./images/bike-quiz-app.jpg" alt="Bike Type Quiz - HTML5 CSS3 JS and JQuery" class="projectMainImage"/>
@@ -60,7 +63,7 @@
                 </ul>
                 
             </section>
-            <section role="contact" class="mainSection contact">
+            <section role="contact" class="mainSection contact" id="contact">
                 <h2>Contact</h2>
                 <address>
                     <p>Email</p>
@@ -68,7 +71,7 @@
                     <p>Github</p>
                 </address>
             </section>
-            <section role="resume" class="mainSection resume">
+            <section role="resume" class="mainSection resume" id="resume">
                 <h2>Resume</h2>
                 <p>Resume Link</p>
             </section>
@@ -76,6 +79,5 @@
         <footer>
                 <p>Lee Lemus &copy; 2019.</p>
         </footer>
-    </div>
     </body>
 </html>
