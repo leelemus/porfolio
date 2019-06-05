@@ -384,14 +384,22 @@ footer p {
         transform: translateY(-8%);
     }
 
+    .mainSection {
+        width: 1000px;
+    }
+
+    .mainSection p {
+        padding: 0 75px;
+    }
+
     #heroImage {
         display: flex;
         transform: translateY(-8%);
-        width: 998px;
+        width: 1000px;
         text-align: center;
         margin: 0 auto;
     }
-    #footer {
+    footer {
         display: flex;
         width: 1000px;
         text-align: center;
