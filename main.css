@@ -21,7 +21,6 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
 }
 
 .headerTitle h1, .headerTitle p {
@@ -40,7 +39,7 @@ header {
     text-decoration: none;
 }
 
-h2 {
+h1, h2 {
     margin-top: 80px;
 }
 
@@ -207,16 +206,10 @@ footer {
     width: 100vw;
 }
 
-/* Extra small devices (phones, 500px and down) */
-@media only screen and (max-width: 500px) {
-    
-    
-} 
-
 /* Small devices (portrait tablets and large phones, 501px and up) */
 @media only screen and (min-width: 501px) {
     .cropImage {
-        max-height: 90vh;
+        max-height: 90%;
         width: 100vw;
         overflow: hidden;
     }
@@ -229,12 +222,12 @@ footer {
 /* Medium devices (landscape tablets, 750px and up) */
 @media only screen and (min-width: 750px) {
     .cropImage {
-        max-height: 100vh;
+        height: 800px;
         width: 100vw;
         overflow: hidden;
     }
     .about {
-        transform: translateY(-15%);
+        transform: translateY(-5%);
         z-index: -2;
     }
     .menu-toggle,
@@ -242,7 +235,6 @@ footer {
     display: none;
     }
   
-    /* Undo positioning of off-canvas menu */
   .main-menu {
     position: relative;
     display: block;
@@ -280,17 +272,23 @@ footer {
 
 /* Large devices (laptops/desktops, 950px and up) */
 @media only screen and (min-width: 950px) {
+    header {
+        height: 100px;
+    }
+    h1, h2 {
+        margin-top: 100px;
+    }
     .cropImage {
-        max-height: 100vh;
+        max-height: 1000px;
         width: 100vw;
         overflow: hidden;
     }
     .about {
-        transform: translateY(-10%);
+        transform: translateY(-5%);
         z-index: -2;
     }
     #heroImage {
-        transform: translateY(-10%);
+        transform: translateY(-5%);
         z-index: -2;
     }
 } 
@@ -310,11 +308,11 @@ footer {
         right: 0;
     }
     .about {
-        transform: translateY(-10%);
+        transform: translateY(-8%);
     }
     #heroImage {
         display: flex;
-        transform: translateY(-10%);
+        transform: translateY(-8%);
         width: 998px;
         text-align: center;
         margin: 0 auto;
