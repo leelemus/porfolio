@@ -6,7 +6,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    color: eee;
+    color: #2d2d2d;
+    background-color: #0086E6;
 }
 
 header {
@@ -18,6 +19,7 @@ header {
     width: 100vw;
     height: 80px;
     background-color: #002640;
+    z-index: 100;
 }
 
 .headerTitle {
@@ -32,15 +34,17 @@ header {
 
 .headerTitle h1 {
     font-size: 1.7em;
+    line-height: 1em;
 }
 
 .headerTitle p {
     font-size: .6em;
+    padding: 0;
 }
 
 .headerTitle a {
     text-decoration: none;
-    color: #eee;
+    color: #fafafa;
 }
 
 h1, h2, h3 {
@@ -50,6 +54,7 @@ h1, h2, h3 {
 
 h1, h2 {
     margin-top: 80px;
+    line-height: .5em;
 }
 
 h1 {
@@ -62,16 +67,18 @@ h2 {
 
 h3 {
     font-size: 2em;
+    line-height: .5em;
 }
 
 p {
     text-align: justify;
     font-size: 1em;
     line-height: 1.5em;
+    padding: 0 5%;
 }
 
 a { 
-    font-size: 20px;
+    font-size: 1em;
 }
 
 
@@ -86,7 +93,7 @@ a {
     padding: 0;
     margin: auto 0;
     font-size: 2em;
-    color: #eee;
+    color: #fafafa;
     outline: none;
 }
 
@@ -126,7 +133,7 @@ a {
     padding: 2em 15px;
     line-height: .8em;
     font-size: 1.2em;
-    color: #eee;                                    
+    color: #fafafa;                                    
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -153,12 +160,7 @@ a {
     display: inline-block;
 }
 
-
-  /*
- On small devices, allow it to toggle...
-*/
-
-.main-menu:target {
+.main-menu:target { /* switch */
     opacity: 1;
     right: 0;
     outline: none;
@@ -179,10 +181,6 @@ a {
     z-index: 1000;
 }
 
-/* 
- We could us `.main-menu:target:after`, but
- it wouldn't be clickable.
-*/
 .main-menu:target + .backdrop {
     position: absolute;
     display: block;  
@@ -205,8 +203,11 @@ a {
   }
 }
 
+/******************/
+/*  Main Section  */
+/******************/
 
-/* Main Section */
+
 main {
     display: flex;
     flex-direction: column;
@@ -218,22 +219,107 @@ main {
 .mainSection {
     display:flex;
     flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 50px;
+    margin: 0 auto 80px auto;
     align-items: center;
+    background-color: #fafafa;
 }
 
 .projects, .contact, .resume {
     border-top: 5px solid #e21b19;
 }
 
-.technologiesUsed, .projectLinks {
-    width: 80%;
+/* Icons, Images, and other */
+
+.projectMainImage {
+    width: 30%;
+    margin: 20px auto 50px auto;
+}
+
+#heroImage {
+    width: 100vw;
+}
+
+.technologiesUsed, .projectLinks, .contactLinks {
+    width: 100%;
     padding: 0;
-    margin: 3vw auto;
+    margin: 2em 0 2em;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
+    list-style-type: none;
+    height: 100%;
+}
+
+.projectlinkButton {
+    height: 4em;
+    vertical-align: middle;
+    position: relative;
+}
+
+.projectlinkButton a {
+    display: flex;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1em;
+    color:#fafafa;
+    text-decoration: none;
+    padding: 1em 2em;
+    background-color: #002640;
+}
+
+.projectlinkButton a:hover {
+    background-color: #e21b19;
+}
+
+.contactLinks {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactlinkButton {
+    width: 60vw;
+    position: relative;
+    margin: 1em auto;
+}
+
+.contactlinkButton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 3vw 0;
+    font-style: normal;
+    color:#fafafa;
+    text-decoration: none;
+    background-color: #002640;
+}
+
+.contactlinkButton a:hover {
+    background-color: #e21b19;
+}
+
+.contactlinkButton .fab, .contactlinkButton .fas {
+    font-size: 1.5em;
+    color: #fafafa;
+}
+
+.fab, .fas {
+    font-size: 3em;
+    color: #aaaaaa;
+    margin-right: 4vw;
+}
+
+#jqueryIcon {
+    height: 2.8em;
+    stroke: #aaaaaa;
+    fill: #aaaaaa;
 }
 
 footer {
@@ -245,15 +331,7 @@ footer {
 
 footer p {
     font-size: .8em;
-    color: #eee;
-}
-
-.projectMainImage {
-    width: 30%;
-}
-
-#heroImage {
-    width: 100vw;
+    color: #fafafa;
 }
 
 /* Small devices (portrait tablets and large phones, 501px and up) */
@@ -265,7 +343,7 @@ footer p {
         overflow: hidden;
     }
 
-    .about {
+    .home {
         transform: translateY(-5%);
         z-index: -2;
     }
@@ -281,7 +359,7 @@ footer p {
         overflow: hidden;
     }
 
-    .about {
+    .home {
         transform: translateY(-5%);
         z-index: -2;
     }
@@ -308,26 +386,28 @@ footer p {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        height: auto;
+        height: 100px;
         width: auto;
+        border: none;
         background: none;
     }
   
     .main-menu a {
-        margin: auto 0;
-        color: #eee;
+        margin: 0;
+        color: #fafafa;
         border: 0 !important; /* Remove borders from off-canvas styling */
+        height: 100px;
     }
     
     .main-menu li {
         border: none;
-        height: 80px;
+        height: 100px;
     }
       
     .main-menu a:hover,
     .main-menu a:focus {
         background: none; /* Remove background from off-canvas styling */
-        color: #eee;
+        color: #fafafa;
         text-decoration: none;
     }
   
@@ -350,7 +430,7 @@ footer p {
         overflow: hidden;
     }
 
-    .about {
+    .home {
         transform: translateY(-5%);
         z-index: -2;
     }
@@ -363,7 +443,7 @@ footer p {
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
 
     header, main {
         max-width: 1000px;
@@ -380,7 +460,7 @@ footer p {
         right: 0;
     }
 
-    .about {
+    .home {
         transform: translateY(-8%);
     }
 
@@ -389,7 +469,7 @@ footer p {
     }
 
     .mainSection p {
-        padding: 0 75px;
+        padding: 0 100px;
     }
 
     #heroImage {
