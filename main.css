@@ -11,8 +11,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: #2d2d2d;
-    background-color: #0086E6;
-}
+    background-color: #fafafa;
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23002640' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  }
 
 header {
     display: flex;
@@ -135,6 +136,7 @@ a:active {
 .main-menu li {
     width: 100%;
     border-bottom: 1px solid #555; 
+    transition: 0.5s cubic-bezier(0.4, 0.42, 0.04, 0.88);
 }
   
 .main-menu a {
@@ -202,7 +204,7 @@ a:active {
     background: rgba(0,0,0,.60);
     cursor: default;
     transition-delay: 1s;
-    transition: bakground 0.5s cubic-bezier(0.77, 0.2, 0.16, 0.77);
+    transition: bakground 0.3s cubic-bezier(0.77, 0.2, 0.16, 0.77);
 }
 
 @supports (position: fixed) {
@@ -235,8 +237,9 @@ main {
     background-color: #fafafa;
 }
 
-.projects, .contact, .resume {
+.about, .projects, .contact, .resume {
     border-top: 5px solid #e21b19;
+    border-bottom: 5px solid #e21b19;
 }
 
 /* Icons, Images, and other */
@@ -296,6 +299,7 @@ main {
     color:#fafafa;
     text-decoration: none;
     background-color: #002640;
+    transition: 0.3s cubic-bezier(0.4, 0.42, 0.04, 0.88);
 }
 
 .projectLinkButton a:hover, .contactLinkButton a:hover, .resumeLinkButton a:hover {
@@ -408,6 +412,39 @@ footer p{
         color: #fafafa;
         text-decoration: none;
     }
+
+    .projectLinks, .technologiesUsed {
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .contactLinks {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 80%;    
+        margin: 3vw auto;
+    }
+
+    .contactLinkButton, .resumeLinkButton, .projectLinkButton {
+        width: 15vw;
+        position: relative;
+        margin: 1em auto;
+        font-size: .8em;
+    }
+
+    .resumeLinkButton {
+        width: 25vw;
+    }
+
+    .contactLinkButton a, .resumeLinkButton a, .projectLinkButton a {
+        padding: 1vw 0;
+    }
+
+    .contactLinkButton .fab, .contactLinkButton .fas, .resumeLinkButton .fas {
+        margin-right: 2vw;
+    }
   
 } 
 
@@ -415,11 +452,21 @@ footer p{
 @media only screen and (min-width: 950px) {
 
     header {
-        height: 100px;
+        height: 90px;
+    }
+
+    .headerTitle h1 {
+        font-size: 2em;
+        line-height: 1em;
+    }
+    
+    .headerTitle p {
+        font-size: .9em;
+        padding: 0;
     }
 
     h1, h2 {
-        margin-top: 100px;
+        margin-top: 90px;
     }
 
     .cropImage {
@@ -477,6 +524,15 @@ footer p{
         text-align: center;
         margin: 0 auto;
     }
+
+    .technologiesUsed li p {
+        padding: 0;
+    }
+
+    .technologiesUsed li {
+        margin-top: 5px;
+    }
+
     footer {
         display: flex;
         width: 1000px;
