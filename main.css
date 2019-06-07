@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -81,6 +85,11 @@ a {
     font-size: 1em;
 }
 
+a:active {
+    color:#e21b19;
+    text-decoration: underline;
+}
+
 
 /*******************************************/
 /*********    Mobile Navigation    *********/
@@ -106,7 +115,7 @@ a {
     overflow-y: scroll;
     overflow-x: visible;
     transform: translate(200px, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.16, 0.77);
+    transition: transform 0.5s cubic-bezier(0.4, 0.42, 0.04, 0.88);
     z-index: 999;
     background-color: #002640;
 }
@@ -241,7 +250,13 @@ main {
     width: 100vw;
 }
 
-.technologiesUsed, .projectLinks, .contactLinks {
+.technologiesUsedTitle {
+    font-size: .8em;
+    margin-bottom: -1.5em;
+    text-align: center;
+}
+
+.technologiesUsed, .projectLinks, .contactLinks, .resumeLinks {
     width: 100%;
     padding: 0;
     margin: 2em 0 2em;
@@ -253,40 +268,22 @@ main {
     height: 100%;
 }
 
-.projectlinkButton {
-    height: 4em;
-    vertical-align: middle;
-    position: relative;
-}
-
-.projectlinkButton a {
-    display: flex;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 600;
+.technologiesUsed li {
     text-align: center;
-    font-size: 1em;
-    color:#fafafa;
-    text-decoration: none;
-    padding: 1em 2em;
-    background-color: #002640;
 }
 
-.projectlinkButton a:hover {
-    background-color: #e21b19;
-}
-
-.contactLinks {
+.projectLinks, .contactLinks, .resumeLinks {
     flex-direction: column;
     justify-content: center;
 }
 
-.contactlinkButton {
+.contactLinkButton, .projectLinkButton, .resumeLinkButton {
     width: 60vw;
     position: relative;
     margin: 1em auto;
 }
 
-.contactlinkButton a {
+.projectLinkButton a, .contactLinkButton a, .resumeLinkButton a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,19 +298,19 @@ main {
     background-color: #002640;
 }
 
-.contactlinkButton a:hover {
+.projectLinkButton a:hover, .contactLinkButton a:hover, .resumeLinkButton a:hover {
     background-color: #e21b19;
 }
 
-.contactlinkButton .fab, .contactlinkButton .fas {
+.contactLinkButton .fab, .contactLinkButton .fas, .resumeLinkButton .fas {
     font-size: 1.5em;
     color: #fafafa;
+    margin-right: 4vw;
 }
 
 .fab, .fas {
     font-size: 3em;
     color: #aaaaaa;
-    margin-right: 4vw;
 }
 
 #jqueryIcon {
@@ -329,9 +326,10 @@ footer {
     background-color: #002640;
 }
 
-footer p {
-    font-size: .8em;
+footer p{
     color: #fafafa;
+    text-align: center;
+    width: 100%;
 }
 
 /* Small devices (portrait tablets and large phones, 501px and up) */
