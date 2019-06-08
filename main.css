@@ -55,6 +55,7 @@ header {
 h1, h2, h3 {
     font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 
 h1, h2 {
@@ -244,9 +245,15 @@ main {
 
 /* Icons, Images, and other */
 
+span.fa-bicycle {
+    color: #002640;
+    font-size: 3em;
+    margin: 1vw auto 1vw;
+}
+
 .projectMainImage {
-    width: 30%;
-    margin: 20px auto 50px auto;
+    width: 80%;
+    margin: 10px auto 50px auto;
 }
 
 #heroImage {
@@ -523,6 +530,10 @@ footer p{
         width: 1000px;
         text-align: center;
         margin: 0 auto;
+    }
+
+    .projectMainImage {
+        width: 60%;
     }
 
     .technologiesUsed li p {
