@@ -1,3 +1,9 @@
+
+/*********************************/
+/*********************************/
+/******* GLOBAL STYLING **********/
+/******* Fonts and color *********/
+/*********************************/
 *
 {
     box-sizing: border-box;
@@ -12,8 +18,54 @@ body {
     font-weight: 300;
     color: #2d2d2d;
     background-color: #fafafa;
-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23002640' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-  }
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23002640' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1, h2, h3 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-top: 85px;
+    line-height: .8em;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+    line-height: .5em;
+}
+
+p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 0 5%;
+}
+
+a { 
+    font-size: 1em;
+}
+
+a:active {
+    color:#e21b19;
+    text-decoration: underline;
+}
+
+/*********************************/
+/******* HEADER SECTION   ********/
+/******* Home Link Banner ********/
+/*******  Navigation      ********/
+/*********************************/
 
 header {
     display: flex;
@@ -53,53 +105,9 @@ header {
     color: #fafafa;
 }
 
-h1, h2, h3 {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-
-h1, h2 {
-    margin-top: 85px;
-    line-height: .5em;
-}
-
-h1 {
-    font-size: 4em;
-}
-
-h2 {
-    font-size: 3em;
-}
-
-h3 {
-    font-size: 2em;
-    line-height: .5em;
-}
-
-p {
-    text-align: justify;
-    font-size: 1em;
-    line-height: 1.5em;
-    padding: 0 5%;
-}
-
-a { 
-    font-size: 1em;
-}
-
-a:active {
-    color:#e21b19;
-    text-decoration: underline;
-}
-
-
-/*******************************************/
 /*********    Mobile Navigation    *********/
-/*********          Menu           *********/
-/*******************************************/
 
-/* Button styling */
+/* toggle icon styling */
 .menu-toggle {
     display: inline-block;
     padding: 0;
@@ -109,6 +117,7 @@ a:active {
     outline: none;
 }
 
+/* nav menu and items */
 .main-menu {
     position: absolute;
     opacity: 0;
@@ -159,6 +168,8 @@ a:active {
 .main-menu a:focus {
     background: #0095FF; 
 }
+
+/* close toggle */
   
 .main-menu .menu-close {
     display: flex;
@@ -209,11 +220,11 @@ a:active {
     transition: bakground 0.3s cubic-bezier(0.77, 0.2, 0.16, 0.77);
 }
 
-@supports (position: fixed) {
-  .main-menu,
-  .main-menu:target + .backdrop {
-    position: fixed;
-  }
+@supports (position: fixed) { /* fixes iOS issue */
+    .main-menu,
+    .main-menu:target + .backdrop {
+        position: fixed;
+    }
 }
 
 /******************/
@@ -352,8 +363,6 @@ footer p{
         width: 100vw;
         overflow: hidden;
     }
-
-    
 
 } 
 
@@ -497,6 +506,7 @@ footer p{
 
     header, main {
         max-width: 1000px;
+        flex-grow: 0;
     }
 
     .cropImage 
@@ -542,11 +552,24 @@ footer p{
         margin-top: 5px;
     }
 
+    .contactLinkButton, .resumeLinkButton, .projectLinkButton {
+        width: 200px;
+    }
+
+    .contactLinkButton a, .resumeLinkButton a, .projectLinkButton a {
+        padding: 20px 0;
+    }
+
+    .contactLinkButton .fab, .contactLinkButton .fas, .resumeLinkButton .fas {
+        margin-right: 20px;
+    }
+
     footer {
         display: flex;
         width: 1000px;
         text-align: center;
         margin: 0 auto;
+        flex-grow: 0;
     }
 
 }
