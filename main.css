@@ -512,6 +512,7 @@ footer p{
     .cropImage 
      {
         max-height: 750px;
+        width: 100%;
      }
 
     header {
