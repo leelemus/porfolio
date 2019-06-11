@@ -500,7 +500,7 @@ footer p{
 
     #heroImage {
         transform: translateY(-5%);
-        z-index: -2;
+        z-index: 0;
     }
 
 } 
