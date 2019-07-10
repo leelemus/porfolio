@@ -260,15 +260,13 @@ main {
 }
 
 /* Icons, Images, and other */
-
-span.fa-bicycle {
+.icons {
     color: #002640;
     font-size: 3em;
     margin: 1vw auto 1vw;
 }
 
 .projectMainImage {
-    width: 80%;
     margin: 10px auto 50px auto;
 }
 
@@ -335,7 +333,7 @@ span.fa-bicycle {
     margin-right: 4vw;
 }
 
-.fab, .fas {
+.fab {
     font-size: 3em;
     color: #aaaaaa;
 }
