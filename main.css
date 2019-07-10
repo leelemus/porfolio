@@ -268,6 +268,7 @@ main {
 
 .projectMainImage {
     margin: 10px auto 50px auto;
+    max-width: 80%
 }
 
 #heroImage {
